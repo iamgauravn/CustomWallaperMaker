@@ -12,7 +12,7 @@
   </tr>
 </table>
  
-<h3> Introduction </h3>
+<h1> Introduction </h1>
  
 Introducing Wallpaper Maker: Personalize Your Android Device Like Never Before!
 
@@ -22,5 +22,5 @@ With My Custom Wallpaper, you have the freedom to break free from the limitation
 
 So, why settle for generic wallpapers that fail to capture your individuality? Elevate your Android device's aesthetics with My Custom Wallpaper and let your imagination run wild. 
 
-<h3> Figma ( UI ) </h3>
+<h2> Figma ( UI ) </h2>
 https://www.figma.com/file/gwyoO6ymXphZepjejhY8KM/Wallpaper-Maker?type=design&node-id=0%3A1&t=YLwSgXXAqmhzyct8-1
