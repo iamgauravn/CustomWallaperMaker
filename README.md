@@ -1,24 +1,29 @@
 <h1 align="center"><b>Wallpaper_Maker</b></h1>
 <h4 align="center">Custom Mobile Wallpaper Application</h4>
 
-<div class="row">
-  <div class="column">
+<div class="row"  display: flex>
+  <div class="column"   flex: 33.33%;
+  padding: 5px>
  <img src='https://github.com/iamgauravn/Wallpaper_Maker/assets/80909649/fc5294d5-3f93-4d68-9ef6-aabe08a7013b' height='300'>
   </div>
-  <div class="column">
+  <div class="column"   flex: 33.33%;
+  padding: 5px>
     <img src='https://github.com/iamgauravn/Wallpaper_Maker/assets/80909649/1184c63a-31d1-4047-8d64-27dc882d7b09' height='300'>
   </div>
-  <div class="column">
+  <div class="column"   flex: 33.33%;
+  padding: 5px>
 <img src='https://github.com/iamgauravn/Wallpaper_Maker/assets/80909649/c992de10-266d-4f2e-815c-32f685b8d135' height='300'>
   </div>
 </div>
 
 
-<div class="row">
-  <div class="column">
+<div class="row"  display: flex>
+  <div class="column"   flex: 33.33%;
+  padding: 5px>
 <img src='https://github.com/iamgauravn/Wallpaper_Maker/assets/80909649/dc52c2ce-53c0-4080-8aea-2089ea0832e7' height='300'>
   </div>
-  <div class="column">
+  <div class="column"   flex: 33.33%;
+  padding: 5px>
   <img src='https://github.com/iamgauravn/Wallpaper_Maker/assets/80909649/abf1692f-e283-4ef9-9e1b-4bc5e1176046' height='300'>
   </div>
 </div>
