@@ -17,4 +17,5 @@
 Native Android Application made in JAVA which allows the user to set there photos and videos as home screen, lock screen or both screens.
 Also some custom live wallpapers are also added.
 
-[![Figma](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)]('https://www.figma.com/file/gwyoO6ymXphZepjejhY8KM/Wallpaper-Maker?type=design&node-id=0%3A1&t=YLwSgXXAqmhzyct8-1) 
+<h3> Figma ( UI ) </h3>
+https://www.figma.com/file/gwyoO6ymXphZepjejhY8KM/Wallpaper-Maker?type=design&node-id=0%3A1&t=YLwSgXXAqmhzyct8-1
