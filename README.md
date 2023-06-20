@@ -13,9 +13,14 @@
 </table>
  
 <h3> Introduction </h3>
+ 
+Introducing Wallpaper Maker: Personalize Your Android Device Like Never Before!
 
-Native Android Application made in JAVA which allows the user to set there photos and videos as home screen, lock screen or both screens.
-Also some custom live wallpapers are also added.
+Are you tired of looking at the same old wallpaper on your Android device? Do you wish you could truly make your phone or tablet reflect your personality and style? Look no further! Presenting My Custom Wallpaper, a native Android application designed to empower you to set your own photos and videos as your device's wallpaper effortlessly.
+
+With My Custom Wallpaper, you have the freedom to break free from the limitations of preloaded wallpapers and express yourself in a truly unique way. Let your creativity shine by setting your favorite memories, breathtaking landscapes, or even hilarious videos as your device's wallpaper. The possibilities are endless!
+
+So, why settle for generic wallpapers that fail to capture your individuality? Elevate your Android device's aesthetics with My Custom Wallpaper and let your imagination run wild. 
 
 <h3> Figma ( UI ) </h3>
 https://www.figma.com/file/gwyoO6ymXphZepjejhY8KM/Wallpaper-Maker?type=design&node-id=0%3A1&t=YLwSgXXAqmhzyct8-1
