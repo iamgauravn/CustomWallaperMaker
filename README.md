@@ -1,6 +1,7 @@
 <h1 align="center"><b>Wallpaper_Maker</b></h1>
 <h4 align="center">Custom Mobile Wallpaper Application</h4>
 
+<p>
 ![Splash Screen](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white)
 <img src='https://github.com/iamgauravn/Wallpaper_Maker/assets/80909649/fc5294d5-3f93-4d68-9ef6-aabe08a7013b' height='300'>
 
@@ -15,6 +16,7 @@
 
 ![List](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white)
  <img src='https://github.com/iamgauravn/Wallpaper_Maker/assets/80909649/abf1692f-e283-4ef9-9e1b-4bc5e1176046' height='300'>
+</p>
 
 <h3> Introduction </h3>
 
