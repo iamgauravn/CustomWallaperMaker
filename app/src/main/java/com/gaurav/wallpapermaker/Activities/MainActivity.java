@@ -11,6 +11,7 @@ import android.app.Dialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.view.View;
@@ -50,11 +51,24 @@ public class MainActivity extends AppCompatActivity {
 
     private Boolean checkPermission() {
 
-        if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED) {
-            ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, code);
-            return false;
+        if(Build.VERSION.SDK_INT > 32) {
+
+            if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.READ_MEDIA_IMAGES) == PackageManager.PERMISSION_DENIED) {
+                ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.READ_MEDIA_IMAGES}, code);
+                return false;
+            } else {
+                return true;
+            }
+
         } else {
-            return true;
+
+            if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED) {
+                ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, code);
+                return false;
+            } else {
+                return true;
+            }
+
         }
 
     }
@@ -70,87 +84,42 @@ public class MainActivity extends AppCompatActivity {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
 
 
-        if (requestCode == code) {
+        if(Build.VERSION.SDK_INT > 32 ) {
 
-            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                if (checkPermission()) {
-                    startActivity();
-                }
-            } else {
-                if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) && ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.READ_EXTERNAL_STORAGE)) {
+            if (requestCode == code) {
 
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    if (checkPermission()) {
+                        startActivity();
+                    }
                 } else {
-                    showDialog();
+                    if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.READ_MEDIA_IMAGES)) {
+
+                    } else {
+                        //open system settings here
+                    }
                 }
             }
-        }
 
-    }
+        } else {
 
-    private void showDialog() {
+            if (requestCode == code) {
 
-        final Dialog dialog = new Dialog(this);
-        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        dialog.setCancelable(false);
-        dialog.setContentView(R.layout.permission_layout);
-        dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    if (checkPermission()) {
+                        startActivity();
+                    }
+                } else {
+                    if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) && ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.READ_EXTERNAL_STORAGE)) {
 
-        TextView tv_text = dialog.findViewById(R.id.tv_text);
-        TextView tv_grant = dialog.findViewById(R.id.tv_grant);
-        TextView tv_cancel = dialog.findViewById(R.id.tv_cancel);
-
-        tv_grant.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
-                Uri uri = Uri.fromParts("package", getPackageName(), null);
-                intent.setData(uri);
-                startActivity(intent);
-
-                dialog.dismiss();
+                    } else {
+                        //open system settings here
+                    }
+                }
             }
-        });
 
-        tv_cancel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                dialog.dismiss();
-            }
-        });
-
-        dialog.show();
-
-    }
-
-    @Override
-    protected void onPause() {
-
-        if (adView != null) {
-            adView.pause();
         }
 
-        super.onPause();
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-
-        if (adView != null) {
-            adView.resume();
-        }
-
-    }
-
-    @Override
-    public void onDestroy() {
-
-        if (adView != null) {
-            adView.destroy();
-        }
-
-        super.onDestroy();
     }
 
 }
