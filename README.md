@@ -1,4 +1,4 @@
-<h1 align="center"><b>Wallpaper_Maker</b></h1>
+<h1 align="center"><b>Pallarax Wallpaper</b></h1>
 <h4 align="center">Custom Mobile Wallpaper Application</h4>
 
 
